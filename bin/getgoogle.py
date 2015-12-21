@@ -51,7 +51,7 @@ def GetConsigne():
 datej=time.strftime('%Y-%m-%d',time.localtime())
 #datej=time.strftime('%d/%m/%y',time.localtime())
 heurej=time.strftime('%H:%M',time.localtime())
-lignecde="gcalcli --cal="+domoticz_cal+" --started agenda "+"'"+str(aujourdhui)+" "+str(heurej)+"' '"+str(demain)+"' "+options
+lignecde="/usr/local/bin/gcalcli --cal="+domoticz_cal+" --started agenda "+"'"+str(aujourdhui)+" "+str(heurej)+"' '"+str(demain)+"' "+options
 #############################
  
 CheckFile()
