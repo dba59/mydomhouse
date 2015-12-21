@@ -1,0 +1,8 @@
+#!/bin/bash
+
+myapp=/home/pi/domoticz/domoticz
+
+if [ ! "$(sudo pidof $myapp)" ]
+then
+ sudo /etc/init.d/domoticz start 
+fi
