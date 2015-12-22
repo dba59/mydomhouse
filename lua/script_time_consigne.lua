@@ -36,8 +36,11 @@ f:close()
 -- nowtemp = tonumber(otherdevices_svalues['Te Consigne'])
 print('Current Consigne: '..tostring(Consigne))
 --Uncomment to use UpdateDevice
-commandArray['UpdateDevice'] = '41|0|'..Consigne
+-- commandArray['UpdateDevice'] = '41|0|'..Consigne
+-- commandArray['UpdateDevice'] = '161|0|'..Consigne
 --Uncomment to use OpenURL and json
---commandArray['OpenURL'] = 'http://192.168.0.2:8081/json.htm?type=command&param=udevice&idx=41&nvalue=0&svalue='..tostring(nowtemp+1)
+--commandArray['OpenURL'] = 'http://192.168.0.25:8081/json.htm?type=command&param=udevice&idx=41&nvalue=0&svalue='..tostring(nowtemp+1)
+commandArray[1]={['OpenURL']='http://192.168.0.25:8081/json.htm?type=command&param=udevice&idx=41&nvalue=0&svalue='..tostring(Consigne) }
+commandArray[2]={['OpenURL']='http://192.168.0.25:8081/json.htm?type=command&param=udevice&idx=161&nvalue=0&svalue='..tostring(Consigne) }
 
 return commandArray
